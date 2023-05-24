@@ -1,0 +1,98 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?=Sriracha&display=swap');
+
+:root {
+    --font1: Verdana, Geneva, Tahoma, 'sans-serif';
+    --font2: 'Passion One', cursive;
+    --font3: 'Sriracha', cursive;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html, body {
+    min-height: 100vh;
+    background-color: darkgray;
+    font-family: var(--font1);
+}
+
+header {
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-family: var(--font2);
+}
+
+header > h1 {
+    padding-top: 50px;
+    font-variant: small-caps; /* A propriedade "font-variant" e o valor "small-caps" tornam a fonte em maiúscula, porém deixando a primeira letra mais elevada que as outras. Para configurar todas as letras em maiúsculas (ou em minúsculas), usa-se a propriedade "text-transform" e os valores.*/
+    font-size: 10vw;/*É possível modificar o tamanho da fonte usando a propriedade "font-size" junto do valor VW (view-width) para que a fonte adapte-se de acordo com o tamanho da largura tela. Porém, esse método não é o mais recomendado.*/
+}
+
+header > p {
+    padding-bottom: 50px;
+}
+
+a { /* Uma forma de configurar um ítem específico que está em diferentes locais do HTML, é juntando declarações numa só, por exemplo: header a, footer a. */
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+a:hover { /*Forma alternativa: "header a:hover, footer a:hover".*/
+    text-decoration: underline;
+}
+
+section {
+    padding-top: 10vh; /* Lê-se "dez por cento da view height" da tela.*/
+    padding-bottom: 10vh;
+    padding-left: 30px;
+    line-height: 2em;
+    font-family: var(--font3);
+    font-size: 3.5vw;
+}
+
+section > p {
+    padding-bottom: 2em;
+}
+
+section.normal {
+    background-color: white;
+    color: black;
+}
+
+section.imagem {
+    background-color: rgb(51, 51, 51);
+    color: white;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.500);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+section#img01 {
+    background-image: url(../imagens/background-001.jpg);
+    background-position: right center;
+}
+
+section#img02 {
+    background-image: url(../imagens/background002.jpg);
+    background-position: right center;
+}
+
+section.imagem > p {
+    display: inline-block;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.500);
+    text-shadow: 1px 1px 0px black;
+}
+
+footer {
+    background-color: black;
+    color: lightgray;
+    text-align: center;
+    padding: 10px;
+}
